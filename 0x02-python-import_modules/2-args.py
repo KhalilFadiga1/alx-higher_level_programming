@@ -10,4 +10,3 @@ if __name__ == "__main__":
         print("{} arguments:".format(numOfArg))
     for x in range(numOfArg):
         print("{}: {}".format(x + 1, argv[x + 1]))
-
