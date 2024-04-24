@@ -7,7 +7,7 @@ const myObject = {
 
 console.log(myObject);
 
-myObject.icr = function () => {
+myObject.icr = function () {
   this.value++;
 }
 
