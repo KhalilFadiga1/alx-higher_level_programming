@@ -10,5 +10,5 @@ if __name__ == "__main__":
     curs = db.cursor()
 
     #Executing the SQL query to retrieve all states sorted by id
-    curs.execute("SELECT * FROM states ORDER BY `id`")
+    curs.execute("SELECT * FROM `states` ORDER BY `id`")
     [print(state) for state in curs.fetchall() if state[1][0] == "N"]
