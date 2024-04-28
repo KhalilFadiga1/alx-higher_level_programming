@@ -7,8 +7,8 @@ if __name__ == "__main__":
     #Get MySQL credentials from command-line arguments
     #Connecting MySQL server
     db = MySqLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    curs = db.cursor()
+    c = db.cursor()
 
     #Executing the SQL query to retrieve all states sorted by id
-    curs.execute("SELECT * FROM `states` ORDER BY `id`")
-    [print(state) for state in curs.fetchall() if state[1][0] == "N"]
+    c.execute("SELECT * FROM `states` ORDER BY `id`")
+    [print(state) for state in c.fetchall() if state[1][0] == "N"]
