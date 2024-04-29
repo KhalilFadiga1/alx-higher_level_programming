@@ -4,9 +4,6 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    import MySQLdb
-    import sys
-
     #Get the cml args
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
@@ -14,7 +11,7 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     #Connecting to the MySQL server
-    db = MySQLdb.connect(host = 'localhost', port = 3306, user = mysql_username, db = databse_name)
+    db = MySQLdb.connect(host = 'localhost', port = 3306, user = mysql_username, db = database_name)
     
     #Create a cursor obj to execute queries
     cursor = db.cursor()
