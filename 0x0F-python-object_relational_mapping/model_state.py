@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """Represents a state for a MySQL databse.
 
@@ -14,5 +15,5 @@ class State(Base):
     name (sqlalchemy. String): The state's name.
     """
     __tablename__ = "states"
-    id = Column(Integer, primary_key = True)
-    name = Column(String(120), nullable = False)
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
