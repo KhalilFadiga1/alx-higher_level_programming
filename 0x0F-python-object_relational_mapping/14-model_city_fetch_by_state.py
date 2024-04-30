@@ -20,7 +20,7 @@ if __name__ == "__main__":
     #Retrieve cities and their associated states from the database
     # by joining the City and state tables based on the state_id
     #Ordering the results by city ID
-    for state in session.query(City, State) \
+    for city, state in session.query(City, State) \
                         .filter(City.state_id == State.id) \
                         .order_by(City.id):
         # Print the City and State information
