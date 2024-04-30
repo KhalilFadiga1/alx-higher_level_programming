@@ -18,7 +18,7 @@ if __name__ == "__main__":
     session = session()
 
     #Create a new State object for Louisiana
-    louisiana = State(name = "Lousiana")
+    louisiana = State(name="Louisiana")
     
     #Add the new state to session
     session.add(louisiana)
@@ -27,4 +27,4 @@ if __name__ == "__main__":
     session.commit()
 
     #Print the ID of the new state
-    print(lousiana.id)
+    print(louisiana.id)
