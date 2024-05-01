@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module that retrieves and prints lists of cities with their respective states from a MySQL database using SQLAlchemy"""
+"""Module that retrieves and prints lists of cities with their respective states from a MySQL database using SQLAlchemy
+"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -22,7 +24,7 @@ if __name__ == "__main__":
     # by joining the City and state tables based on the state_id
     #Ordering the results by city ID
     for city, state in session.query(City, State) \
-                        .filter(City.state_id == State.id) \
-                        .order_by(City.id):
+                              .filter(City.state_id == State.id) \
+                              .order_by(City.id):
         # Print the City and State information
         print("{}: ({}) {}".format(state.name, city.id, city.name))
