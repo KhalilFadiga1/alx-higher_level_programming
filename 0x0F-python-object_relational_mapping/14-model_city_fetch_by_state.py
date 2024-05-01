@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module that retrieves and prints lists of cities with their respective states from a MySQL database using SQLAlchemy
+"""Module that retrieves and prints lists of cities with their respective states from
+   a MySQL database using SQLAlchemy
 """
 
 import sys
