@@ -14,7 +14,7 @@ if __name__ == "__main__":
     #Get the CML arguments
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
-    mysql_name = sys.argv[3]
+    database_name = sys.argv[3]
 
     #Create the engine to connect to the server
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
