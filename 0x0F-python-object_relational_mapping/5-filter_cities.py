@@ -19,7 +19,9 @@ if __name__ == "__main___":
 
     #Fetch all rows and filter cities by the specified states
     #Print the cities
-    print(", ".join([ct[2] for ct in ct.fetchall() if ct[4] == sys.argv[4]]))
+    rows = c.fetchall()
+    temp = list(row[0] for row in rows)
+    print(*temp, sep=", ")
 
     #Close the server and the database
     c.close()
